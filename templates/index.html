@@ -1,0 +1,10 @@
+<h1>Welcome to SnippySnipperson.</h1>
+<p>The best snippet app ever.</p>
+
+<a href="{% url "snippet_list" %}">Snippets</a>
+
+<ul>
+	{% for snippet in Snippets %}
+	<li><a href="{% url "snippet_detail" snippet.id %}">{{snippet}}</a></li>
+	{% endfor %}
+</ul>
